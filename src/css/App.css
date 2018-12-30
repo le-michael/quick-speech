@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+/*font-size: calc(10px + 2vmin);*/
+
+.App {
+  margin: auto;
+  margin-top: 5vh;
+  
+  
+  padding-right: 5vw;
+  padding-left: 5vw;
+  width: 70vw;
+  height: 80vh;
+  /* border:solid 1px; */
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none;
+  overflow: hidden;
+
+}
+
+.text-display {
+  margin-top: 5vh; 
+  font-size: 7vmin;
+
+  width: 100%;
+  border-bottom: solid 1px silver;
+}
+
+
+.keyboard {
+  padding-top: 2vmin;
+  padding-bottom: 3.5vmin;
+
+}
+
+.key {
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-size: 5vmin;
+  
+  padding: 1.5vmin;
+  padding-left:3vmin;
+  padding-right: 3vmin;
+
+  margin-right: 1vw;
+  margin-top: 1vh;
+  background-color: #fffdfa;
+}
+
+.menu {
+  border-bottom: solid 1px silver;
+  padding-bottom: 3vmin;
+}
+.menu-item {
+  display: inline-block;
+  font-size: 3.5vmin;
+  padding: 1vmin;
+  margin-top: 2vmin;
+  margin-right: 2vmin;
+}
+
+.add-item{
+  display: inline-block;
+  font-size: 3.5vmin;
+  padding: 1vmin;
+  padding-left: 2vmin;
+  padding-right: 2vmin;
+  margin-top: 2vmin;
+  color: silver;
+}
+
+.command {
+  text-align: center;
+  display: inline-block;
+  font-size: 4vmin;
+  padding: 1vmin;
+  margin-right: 1vmin;
+  width: 30%;
+}
+
+.command-group {
+
+  padding-top: 2vmin;
+}
+
+.phrase {
+  font-size: 3.5vmin;
+}
+
+.dim { 
+  color: silver;
+}

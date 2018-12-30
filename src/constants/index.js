@@ -1,0 +1,21 @@
+export default {
+    CHANGE_STATE: 'CHANGE_STATE',
+
+    CHANGE_KEYBOARD: 'CHANGE_KEYBOARD',
+
+    ADD_TEXT: 'ADD_TEXT',
+
+    CLEAR_TEXT: 'CLEAR_TEXT',
+
+    DEL_TEXT: 'DEL_TEXT',
+
+    SAY_TEXT: 'SAY_TEXT',
+
+    SAVE: 'SAVE',
+
+    DELETE: 'DELETE',
+
+    EDIT_PHRASE: 'EDIT_PHRASE',
+
+    EDIT_MENU: 'EDIT_MENU',
+}

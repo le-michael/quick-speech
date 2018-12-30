@@ -1,0 +1,12 @@
+export default {
+
+    NORMAL: 'NORMAL',
+
+    ADD_KEYBOARD: 'ADD_KEYBOARD',
+
+    ADD_PHRASE: 'ADD_PHRASE',
+
+    EDIT_PHRASE: 'EDIT_PHRASE',
+
+    EDIT_MENU: 'EDIT_MENU',
+}
