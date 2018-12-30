@@ -141,6 +141,7 @@ class ClientStore extends EventEmitter {
         } else if (state === AppStates.EDIT_MENU) {
             var clone = keyboards[keyEdit]
             delete keyboards[keyEdit];
+            prev = 'CUSTOM';
             if (text !== "" ) {
                 keyboards[text] = clone;
                 prev = text;
