@@ -82,11 +82,12 @@ body {
   padding: 1vmin;
   margin-right: 1vmin;
   width: 30%;
+  margin-top: 2vmin;
 }
 
 .command-group {
 
-  padding-top: 2vmin;
+  padding-top: 0vmin;
 }
 
 .phrase {
@@ -95,4 +96,11 @@ body {
 
 .dim { 
   color: silver;
+}
+
+.state {
+  position: absolute;
+  left:1vmin;
+  top:0;
+  font-size: 2vmin;
 }

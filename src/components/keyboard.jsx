@@ -104,8 +104,8 @@ class CommandGroup extends Component {
         }
         return (
             <div className="command-group">
-                <Paper onClick={()=>ClientActions.clearText()} className="command">CLEAR</Paper>
                 <Paper onClick={()=>ClientActions.delete()} className="command del">{this.renderDeleteButton()}</Paper>
+                <Paper onClick={()=>ClientActions.delText()} className="command">UNDO</Paper>
                 <Paper onClick={()=>ClientActions.save()} className="command save">SAVE</Paper>
             </div>
         );

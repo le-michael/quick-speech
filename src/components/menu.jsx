@@ -28,6 +28,10 @@ class MenuItem extends Component {
 
         this.handleClick = this.handleClick.bind(this);
         this.handleRelease = this.handleRelease.bind(this);
+
+
+        this.handleTouchStart = this.handleTouchStart.bind(this);
+        this.handleTouchEnd = this.handleRelease.bind(this);
     }
 
     handleClick() {
@@ -37,6 +41,14 @@ class MenuItem extends Component {
                 ClientAction.editMenu(this.props.id);
             },500)
         }
+    }
+
+    handleTouchStart() {
+        if (this.props.id !== "CUSTOM") {
+            this.buttonTimer = setTimeout(()=>{
+                ClientAction.editMenu(this.props.id);
+            },500)
+        } 
     }
 
     componentWillUnmount(){
@@ -49,7 +61,12 @@ class MenuItem extends Component {
 
     render() {
         return (
-            <Paper onMouseDown={()=>this.handleClick()} onMouseUp={()=>this.handleRelease()} className='menu-item'>
+            <Paper  onMouseDown={this.handleClick} 
+                    onMouseUp={this.handleRelease} 
+                    className='menu-item'
+                    onTouchStart={this.handleTouchStart} 
+                    onTouchEnd={this.handleRelease}
+                    >
                 {this.props.children}
             </Paper>            
         );

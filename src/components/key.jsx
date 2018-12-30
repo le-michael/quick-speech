@@ -16,6 +16,8 @@ class Key extends Component {
 
         this.handleClick = this.handleClick.bind(this);
         this.handleRelease = this.handleRelease.bind(this);
+
+        this.handleTouchStart = this.handleTouchStart.bind(this);
     }
 
     handleClick() {
@@ -28,9 +30,19 @@ class Key extends Component {
         }
     }
 
+    handleTouchStart() {
+        if (this.props.canEdit) {
+            this.buttonTimer = setTimeout(()=>{
+                ClientActions.editPhrase(this.props.id);
+            },500)
+        }   
+    }
+
+
     componentWillUnmount(){
         clearTimeout(this.buttonTimer);
     }
+
 
     handleRelease() {
         clearTimeout(this.buttonTimer);
@@ -38,7 +50,13 @@ class Key extends Component {
 
     render() {
         return (
-            <Paper onMouseDown={this.handleClick} onMouseUp={this.handleRelease} className={this.class}>{this.props.children}</Paper>
+            <Paper  onMouseDown={this.handleClick} 
+                    onTouchStart={this.handleTouchStart} 
+                    onTouchEnd={this.handleRelease}
+                    onMouseUp={this.handleRelease} 
+                    className={this.class}
+                    
+                    > {this.props.children}</Paper>
         );
     }
 }

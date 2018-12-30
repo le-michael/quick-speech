@@ -34,7 +34,7 @@ class App extends Component {
       <div>
         
         <div className="App">
-          <p>Current State: {ClientStore.getState()}</p>
+          <p className="state">Current State: {ClientStore.getState()}</p>
           <TextDisplay></TextDisplay>
           <Menu></Menu>
           <Keyboard></Keyboard>
